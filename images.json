@@ -1,14 +1,14 @@
 [
-  { "url": "/images/1.jpg", "alt": "Fashion 1" },
-  { "url": "/images/1_1.jpg", "alt": "Fashion 1_1" },
-  { "url": "/images/2_1.jpg", "alt": "Fashion 2_1" },
-  { "url": "/images/2.jpg", "alt": "Fashion 2" },
-  { "url": "/images/3.jpg", "alt": "Fashion 3" },
-  { "url": "/images/4.jpg", "alt": "Fashion 4" },
-  { "url": "/images/5.jpg", "alt": "Fashion 5" },
-  { "url": "/images/6.jpg", "alt": "Fashion 6" },
-  { "url": "/images/7.jpg", "alt": "Fashion 7" },
-  { "url": "/images/8.jpg", "alt": "Fashion 8" },
-  { "url": "/images/9.jpg", "alt": "Fashion 9" },
-  { "url": "/images/10.png", "alt": "Fashion 10" }
+  { "url": "images/1.jpg", "alt": "Fashion 1" },
+  { "url": "images/1_1.jpg", "alt": "Fashion 1_1" },
+  { "url": "images/2_1.jpg", "alt": "Fashion 2_1" },
+  { "url": "images/2.jpg", "alt": "Fashion 2" },
+  { "url": "images/3.jpg", "alt": "Fashion 3" },
+  { "url": "images/4.jpg", "alt": "Fashion 4" },
+  { "url": "images/5.jpg", "alt": "Fashion 5" },
+  { "url": "images/6.jpg", "alt": "Fashion 6" },
+  { "url": "images/7.jpg", "alt": "Fashion 7" },
+  { "url": "images/8.jpg", "alt": "Fashion 8" },
+  { "url": "images/9.jpg", "alt": "Fashion 9" },
+  { "url": "images/10.png", "alt": "Fashion 10" }
 ]
