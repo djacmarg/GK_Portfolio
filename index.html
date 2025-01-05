@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenKreation Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-green-50 font-sans">
+    <header class="bg-green-600 text-white p-4 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">GreenKreation</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="#images" class="hover:text-green-200">Images</a></li>
+            <li><a href="#videos" class="hover:text-green-200">Videos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container mx-auto text-center">
+        <h1 class="text-3xl font-bold">Green Kreation Portfolio</h1>
+        <p class="text-lg">Showcasing Style, Creativity, and Passion</p>
+      </div>
+    </header>
+
+    <main class="container mx-auto my-8">
+      <!-- About Section -->
+      <section class="py-10">
+        <div class="container mx-auto text-center">
+          <h2 class="text-2xl font-bold mb-4">About Me</h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Welcome to my portfolio! I'm a passionate fashion designer dedicated
+            to creating timeless and innovative designs. Explore my journey
+            through these curated pieces.
+          </p>
+        </div>
+      </section>
+      <!-- Images Section -->
+      <section id="images" class="mb-16 justify-center">
+        <h2 class="text-3xl font-semibold text-green-700 mb-4">Images</h2>
+        <div
+          id="image-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+        >
+          <!-- Images will be loaded here by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Videos Section -->
+      <!-- Videos Section -->
+      <section id="videos">
+        <h2 class="text-3xl font-semibold text-green-700 mb-4">Videos</h2>
+        <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Videos will be loaded here by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-green-600 text-white p-4 mt-16">
+      <div class="container mx-auto text-center">
+        <p>WhatsApp: +234 706 444 9211</p>
+      </div>
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 GreenKreation. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // Fetch images from a JSON file
+      const loadImages = async () => {
+        try {
+          const response = await fetch("images.json");
+          const images = await response.json();
+          const imageGrid = document.getElementById("image-grid");
+
+          images.forEach((image) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = image.url;
+            imgElement.alt = image.alt || "Fashion Image";
+            imgElement.className = "rounded shadow-md";
+            imgElement.style.width = "350px";
+            imgElement.style.height = "450px";
+            imageGrid.appendChild(imgElement);
+          });
+        } catch (error) {
+          console.error("Error loading images:", error);
+        }
+      };
+
+      // Fetch videos from a JSON file
+      const loadVideos = async () => {
+        try {
+          const response = await fetch("videos.json");
+          const videos = await response.json();
+          const videoGrid = document.getElementById("video-grid");
+
+          videos.forEach((video) => {
+            const iframeElement = document.createElement("iframe");
+            iframeElement.src = video.url;
+            iframeElement.className = "rounded shadow-md w-full";
+            iframeElement.setAttribute("allowfullscreen", "");
+            videoGrid.appendChild(iframeElement);
+          });
+        } catch (error) {
+          console.error("Error loading videos:", error);
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadImages();
+        loadVideos();
+      });
+    </script>
+  </body>
+</html>
